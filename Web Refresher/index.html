@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPulse | Sustainable Living Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrapper header-container">
+      <div class="brand">
+        <h1>EcoPulse</h1>
+        <span class="brand-sub">Daily Green Living</span>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#habits">Habits</a></li>
+          <li><a href="#tips">Quick Actions</a></li>
+          <li><a href="#pledge">Pledge</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <section class="hero-banner">
+      <h2>Small Shifts, Real Impact</h2>
+      <p>Practical adjustments to reduce domestic energy consumption, minimize packaging waste, and establish sustainable habits that stick.</p>
+    </section>
+
+    <section id="habits" class="content-block">
+      <h2>Core Living Principles</h2>
+      <div class="card-grid">
+        <article class="info-card">
+          <div class="card-pill">Energy</div>
+          <h3>Smart Consumption</h3>
+          <p>Unplug phantom loads, switch fixtures to low-draw LEDs, and program cooling or heating devices to conserve energy during empty hours.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-pill">Waste</div>
+          <h3>Closed-Loop Kitchen</h3>
+          <p>Separate organic trimmings for home compost, freeze leftover produce, and eliminate single-use wrappers by stocking bulk dry staples.</p>
+        </article>
+
+        <article class="info-card">
+          <div class="card-pill">Transit</div>
+          <h3>Low-Emission Travel</h3>
+          <p>Combine local errands into linked trips, prioritize active cycling or transit, and replace short solo vehicle routes with daily walking.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tips" class="content-block">
+      <h2>Instant Practice Toggle</h2>
+      <div class="toggle-container">
+        <div class="toggle-buttons">
+          <button id="btn-home" type="button" class="tab-btn active">Home & Energy</button>
+          <button id="btn-shopping" type="button" class="tab-btn">Groceries & Goods</button>
+        </div>
+        <div id="tip-display" class="tip-card">
+          <h3>Home Checklist</h3>
+          <p>Lower your water heater temperature to 49°C, clean refrigerator coils twice a year, and install weather stripping on draughty exterior doors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pledge" class="content-block">
+      <h2>Make Your Commitment</h2>
+      <div class="form-container">
+        <form id="pledge-form" novalidate>
+          <div class="form-group">
+            <label for="user-name">Your Name</label>
+            <input type="text" id="user-name" required placeholder="Alex Mercer">
+          </div>
+          
+          <div class="form-group">
+            <label for="user-action">Chosen Action Plan</label>
+            <select id="user-action" required>
+              <option value="">Select a commitment...</option>
+              <option value="Cut single-use plastics">Eliminate single-use plastic bottles & bags</option>
+              <option value="Compost organic waste">Compost kitchen trimmings weekly</option>
+              <option value="Reduce home energy use">Lower household electricity usage by 15%</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">Record Commitment</button>
+        </form>
+
+        <div id="confirmation-box" class="confirmation hidden" role="status" aria-live="polite">
+          <p id="confirmation-text"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>&copy; 2026 EcoPulse Initiative. Built for Web Development II Formative Assessment.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

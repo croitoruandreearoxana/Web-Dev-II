@@ -1,0 +1,262 @@
+:root {
+  --primary: #15803d;
+  --primary-hover: #166534;
+  --accent: #2dd4bf;
+  --bg-main: #f0fdf4;
+  --card-bg: #e2f7e9;
+  --surface: #ffffff;
+  --text-main: #14532d;
+  --text-muted: #3f6212;
+  --border-color: #bbf7d0;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background-color: #14532d;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand h1 {
+  font-size: 1.45rem;
+  letter-spacing: -0.5px;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: var(--accent);
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: #dcfce7;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.hero-banner {
+  background-color: #dcfce7;
+  border: 1px solid var(--border-color);
+  padding: 2.5rem 1.75rem;
+  border-radius: var(--radius);
+  margin: 2rem 0;
+}
+
+.hero-banner h2 {
+  font-size: 1.6rem;
+  color: #14532d;
+  margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+  color: #166534;
+  max-width: 700px;
+}
+
+.content-block {
+  margin-bottom: 3rem;
+}
+
+.content-block h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1.25rem;
+  color: #14532d;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.info-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+.card-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #bbf7d0;
+  color: #14532d;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.info-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #166534;
+}
+
+.toggle-container {
+  background-color: #dcfce7;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  background-color: #ffffff;
+  color: #14532d;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.tip-card {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.tip-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary);
+}
+
+.form-container {
+  background-color: #dcfce7;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  max-width: 580px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input, select {
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #86efac;
+  background-color: #ffffff;
+  color: #14532d;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--primary);
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.confirmation {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background-color: #14532d;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.site-footer {
+  background-color: #14532d;
+  color: #86efac;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header-container {
+    padding: 1.25rem 0;
+  }
+}
