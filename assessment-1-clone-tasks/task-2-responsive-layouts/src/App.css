@@ -1,0 +1,257 @@
+:root {
+  --color-black: #070410;
+  --color-dark-purple: #231651;
+  --color-teal: #4DCCBD;
+  --color-yellow: #EEF36A;
+  --color-white: #FFFFFF;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-black);
+  border-bottom: 2px solid var(--color-teal);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 2em;
+  color: var(--color-yellow);
+  line-height: 1;
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-teal);
+}
+
+.search-btn {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+  border-radius: 16px;
+  padding: 4px 16px;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.search-btn:hover {
+  background-color: var(--color-teal);
+  transform: scale(1.03);
+}
+
+.main-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.movie-card {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0px rgba(7, 4, 16, 0.55);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+}
+
+.poster-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.poster-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.movie-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.1;
+  color: var(--color-black);
+  margin-bottom: 8px;
+}
+
+.movie-desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.65em;
+  line-height: 1.5;
+  color: #2b2b2b;
+}
+
+.watch-btn {
+  background-color: var(--color-teal);
+  color: var(--color-black);
+  border: none;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.watch-btn:hover {
+  background-color: var(--color-yellow);
+  transform: scale(1.02);
+}
+
+/* Tablet Layout (720px - 1023px) */
+@media (min-width: 720px) {
+  .brand-title {
+    font-size: 3em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .main-content {
+    padding: 32px 16px;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .poster-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+/* Desktop Layout (1024px and up) */
+@media (min-width: 1024px) {
+  .brand-title {
+    font-size: 3em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 48px;
+  }
+
+  .main-content {
+    padding: 48px 0;
+    gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-featured {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-featured .poster-wrapper {
+    height: 340px;
+    aspect-ratio: auto;
+  }
+
+  .card-featured .card-details {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px;
+  }
+
+  .card-featured .watch-btn {
+    width: 200px;
+    padding: 10px 16px;
+  }
+
+  .card-standard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-standard .poster-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-standard .card-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-horizontal {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-horizontal .poster-wrapper {
+    height: 100%;
+    min-height: 260px;
+    aspect-ratio: auto;
+  }
+
+  .card-horizontal .card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  .card-horizontal .watch-btn {
+    width: 100%;
+  }
+}
